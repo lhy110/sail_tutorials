@@ -1,5 +1,5 @@
 # SAIL Tutorials
-## 1. Installation and Environment and Envirment Setup.
+## 1. Installation and Envirment Setup.
 
 
 ## 2. Computer Vision Basics and Image Augmenations.
