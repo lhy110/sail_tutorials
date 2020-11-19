@@ -1,7 +1,7 @@
-# Installation and Environment and Envirment Setup
+# Installation and Environment Setup
 By Pac Hung and Zac Todd
 
-This tutorial will coved the setup of three different software enviroments they are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab
+This tutorial will cover the setup of three different software enviroments they are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab
 
 ## Prerequisite Software
 ### Windows
@@ -37,7 +37,8 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 ## Python with Tensorflow 1.X
 ```bash
 git clone https://github.com/zactodd/sail_tutorials.git
-cd 
+cd 1.\ Installation\ and\ Environment\ Setup/
+
 
 conda create --name SAIL python=3.6
 conda activate SAIL
@@ -60,7 +61,7 @@ pip install git+https://github.com/matterport/Mask_RCNN.git
 ````
 
 ## Python and Tensorflow 2.x with Tensorflow Model Garden
-reating enviroment and installing tensorflow.
+Creating environment and installing tensorflow.
 ```bash
 conda create --name python_tf2
 conda activate python_tf2
@@ -76,12 +77,12 @@ conda deactivate
 conda activate python_tf2
 ```
 
-Verify tensorflow using using:
+Verify tensorflow using:
 ```bash
 python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 ```
 
-A result simlar to the following will be printed out.
+A result similar to the following will be printed out.
 ```
 2020-08-05 14:15:28.713790: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
 2020-08-05 14:15:29.388029: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
@@ -153,12 +154,12 @@ cp object_detection/packages/tf2/setup.py .
 python -m pip install .
 ```
 
-Test Object Detection depenacies have been installed using:
+Test Object Detection dependencies have been installed using:
 ```bash
 python object_detection/builders/model_builder_tf2_test.py
 ```
 
-A result simlar to the following will be printed out.
+A result similar to the following will be printed out.
 ```
 ...
 INFO:tensorflow:time(__main__.ModelBuilderTF2Test.test_create_ssd_models_from_config): 15.98s
@@ -212,6 +213,6 @@ pip install -r python_tf2_requirements.txt
 ```
 
 ## Matlab
-MAtlab containes alot of prebuild and tested computer vision, deep learning and sensor fusion tools, which maybe be uses as an inital tutorial in understaning how different methods work. They also provide many notebook style and video tutiorals found [here](https://au.mathworks.com/) and [here](https://www.youtube.com/user/MATLAB) respectivly.
+Matlab contains a lot of prebuild and tested computer vision, deep learning and sensor fusion tools, which maybe be uses as an inital tutorial in understaning how different methods work. They also provide many notebook style and video tutiorals found [here](https://au.mathworks.com/) and [here](https://www.youtube.com/user/MATLAB) respectivly.
 
-Insturtions for installing matlab using the University of Canterbury accoutn are located [here](https://www.canterbury.ac.nz/engineering/schools/mathematics-statistics/student-advice-and-resources/matlab-on-personal-devices/).
+Instructions for installing matlab using the University of Canterbury accoutn are located [here](https://www.canterbury.ac.nz/engineering/schools/mathematics-statistics/student-advice-and-resources/matlab-on-personal-devices/).
