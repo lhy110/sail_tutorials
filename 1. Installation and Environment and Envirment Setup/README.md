@@ -1,4 +1,6 @@
 # Installation and Environment and Envirment Setup
+By Pac Hung and Zac Todd
+
 This tutorial will coved the setup of three different software enviroments they are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab
 
 ## Prerequisite Software
