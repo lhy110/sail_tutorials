@@ -1,4 +1,4 @@
-# Sail Tutorials
+# SAIL Tutorials
 ## 1. Installation and Environment and Envirment Setup.
 This tutorial will go throught the set up a few envirments we uses at sail.
 
