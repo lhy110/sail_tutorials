@@ -1,13 +1,13 @@
 # Installation and Environment Setup
 By Pac Hung and Zac Todd
 
-This tutorial will cover the setup of three different software enviroments they are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab
+This tutorial will cover the setup of three different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
 
 ## Prerequisite Software
 ### Windows
 Download and install [Git](https://git-scm.com/download/win).
 
-Download and install [Annaconda3](https://www.anaconda.com/distribution/) 
+Download and install [Annaconda3](https://www.anaconda.com/distribution/).
 
 Download and install [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
@@ -36,7 +36,8 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 
 ## Python with Tensorflow 1.X
 ```bash
-git clone https://github.com/zactodd/sail_tutorials.git
+git clone https://github.com/lhy/sail_tutorials.git
+cd sail_tutorials
 cd 1.\ Installation\ and\ Environment\ Setup/
 
 
