@@ -3,7 +3,7 @@ This tutorial uses opencv, matplotlib, numpy and skimage, and is run throught ju
 Play around with some of the examples by change with different constant and lines of code. 
 There are some exercise, fill in code where required, and search any terms that you are familiar with.
 
-## 2.1 Colour SPaces
+## 2.1 Colour Spaces
 
 ## 2.2 Convolution
 
