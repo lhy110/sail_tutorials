@@ -36,7 +36,7 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 
 ## Python with Tensorflow 1.X
 ```bash
-git clone https://github.com/lhy/sail_tutorials.git
+git clone https://github.com/lhy110/sail_tutorials.git
 cd sail_tutorials
 cd 1.\ Installation\ and\ Environment\ Setup/
 
