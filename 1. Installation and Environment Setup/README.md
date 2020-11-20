@@ -214,6 +214,6 @@ pip install -r python_tf2_requirements.txt
 ```
 
 ## Matlab
-Matlab contains a lot of prebuild and tested computer vision, deep learning and sensor fusion tools, which maybe be uses as an inital tutorial in understaning how different methods work. They also provide many notebook style and video tutiorals found [here](https://au.mathworks.com/) and [here](https://www.youtube.com/user/MATLAB) respectivly.
+Matlab contains a lot of prebuild and tested computer vision, deep learning and sensor fusion tools, which maybe be uses as an inital tutorial in understaning how different methods work. They also provide many notebook (mlx) and video tutiorals found [here](https://au.mathworks.com/) and [here](https://www.youtube.com/user/MATLAB) respectivly.
 
 Instructions for installing matlab using the University of Canterbury accoutn are located [here](https://www.canterbury.ac.nz/engineering/schools/mathematics-statistics/student-advice-and-resources/matlab-on-personal-devices/).
