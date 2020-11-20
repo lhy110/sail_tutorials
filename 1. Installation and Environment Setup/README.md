@@ -32,7 +32,7 @@ curl –O https://repo.anaconda.com/archive/Anaconda3-<version>-Linux-x86_64.sh
 sha256sum Anaconda3–<version>–Linux–x86_64.sh
 
 bash Anaconda3–<version>–Linux–x86_64.sh
-
+```
 
 ## Python with Tensorflow 1.X
 ```bash
