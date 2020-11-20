@@ -66,7 +66,7 @@ Creating environment and installing tensorflow.
 ```bash
 conda create --name python_tf2 python=3.8
 conda activate python_tf2
-pip install tensorflow
+pip install tensorflow cython
 
 conda install protobuf
 
