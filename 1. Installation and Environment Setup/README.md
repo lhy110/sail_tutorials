@@ -64,7 +64,7 @@ pip install git+https://github.com/matterport/Mask_RCNN.git
 ## Python and Tensorflow 2.x with Tensorflow Model Garden
 Creating environment and installing tensorflow.
 ```bash
-conda create --name python_tf2
+conda create --name python_tf2 python=3.8
 conda activate python_tf2
 pip install tensorflow
 
