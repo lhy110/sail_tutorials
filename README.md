@@ -5,7 +5,7 @@
 ## 2. Computer Vision Basics and Image Augmenations.
 
 
-## 3. Data Collection and Annotation.
+## 3. Data Collection and Labelling.
 
 
 ## 4. Training and Test and use of RoadLearning.
