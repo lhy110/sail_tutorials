@@ -79,8 +79,7 @@ The project can be loaded at later point using the Load option.
 Note:- Ideally, it is better to export the annotations/ save project on a regular
 interval.
 
-Detailed VIA user guide can be found [here](http://www.robots.
-ox.ac.uk/~vgg/software/via/docs/user_guide.html) and the VIA VGG tool itself can be found [here](http://www.robots.ox.ac.uk/~vgg/software/via/via.html).
+Detailed VIA user guide can be found [here](http://www.robots.ox.ac.uk/~vgg/software/via/docs/user_guide.html) and the VIA VGG tool itself can be found [here](http://www.robots.ox.ac.uk/~vgg/software/via/via.html).
 
 <p align="center">
   <img src="resources/Data Labelling - To Detailed.PNG" width=300>
