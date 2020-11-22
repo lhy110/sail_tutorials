@@ -37,6 +37,12 @@ The most common annotation types are;
   * **Object Detection:** Object detection goes a little more deeper than classification. In addition to the detection of the object, it identifies the location (bounding boxes) of the objects.
 * **Image Segmentation:** Image segmentation goes still deeper by recognising and understanding each pixel in the image. Since this provides both what and what is notan object of interest, it is highly accurate but time consuming. Whereas, the othertwo types are faster with less accuracy.
 
+<p align="center">
+  <img src="resources/Image Processing Types.PNG" width=800>
+  <p align="center">Fig.1 - Types of Data Lables.</p>
+</p>
+
+
 ### How does data labeling work?
 In machine learning, a properly labeled dataset that is used as the objective
 standard to train a model is often called “ground truth.” The accuracy of your trained
@@ -72,7 +78,88 @@ The annotations can be saved as a project as well using Project -> Save option.
 The project can be loaded at later point using the Load option.
 Note:- Ideally, it is better to export the annotations/ save project on a regular
 interval.
-Detailed VIA user guide can be found by following the URL. (http://www.robots.
-ox.ac.uk/~vgg/software/via/docs/user_guide.html)
 
-Complete the entire list of topics mentioned under Basic Usage to get a good understanding of this tool usage
+Detailed VIA user guide can be found [here](http://www.robots.ox.ac.uk/~vgg/software/via/docs/user_guide.html) and the VIA VGG tool itself can be found [here](http://www.robots.ox.ac.uk/~vgg/software/via/via.html).
+
+<p align="center">
+  <img src="resources/Data Labelling - To Detailed.PNG" width=300>
+  <img src="resources/Data Labelling - Few Details.PNG" width=300>
+  <img src="resources/Data Labelling - Correct.PNG" width=300>
+  <p align="center">Fig.2 - Road Surface Labled Example. Note from left to right is too many points, too few point, correct number of points.</p>
+</p>
+
+<p align="center">
+  <img src="resources/Data Labelling - To Detailed_2.PNG" width=300>
+  <img src="resources/Data Labelling - Few Details_2.PNG" width=300>
+  <img src="resources/Data Labelling - Correct_2.PNG" width=300>
+  <p align="center">Fig.3 - Potholee Labled Example. Note from left to right is too many points, too few point, correct number of points.</p>
+</p>
+
+### VIA VGG Output
+VIA VGG export to VGG json format and COCO json format.
+
+Example of VGG JSON:
+```json
+ {
+        "image_1.png": {
+                "regions": [
+                                {
+                                    "shape_attributes": {
+                                        "name": "polygon",
+                                        "all_points_x": [0, 25, 25, 0],
+                                        "all_points_y": [0, 0, 25, 25]
+                                    },
+                                    "region_attributes": {"label": "catfish"}
+                                }
+                ]  
+        }
+    }
+```
+some annotation tool maybe output "regions" as a dictionary instead of a list so it may look like this as well:
+```json
+{
+        "image_1.png": {
+                "regions": {
+                        "0": {
+                            "shape_attributes": {
+                                "name": "polygon",
+                                "all_points_x": [0, 25, 25, 0],
+                                "all_points_y": [0, 0, 25, 25]
+                            },
+                            "region_attributes": {"label": "catfish"}
+                        }
+        }
+    }
+```
+
+Example of COCO JSON:
+```json
+{
+        "info": {
+            "images": [
+                {
+                    "id": 1,
+                    "width": 1504,
+                    "height": 2016,
+                    "file_name": "image_1.jpg"
+                }
+            ],
+            "annotations": [
+                {
+                    "id": 0,
+                    "iscrowd": 0,
+                    "image_id": 1,
+                    "category_id": 1,
+                    "segmentation":[[87.281, 708.408, 1416.71826, 1307.59]],
+                    "bbox": [87.281, 708.408, 1416.71826, 1307.59],
+                    "area":796574.87632
+                }
+            ],
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "laptop"
+                }
+            ]
+        }
+```
