@@ -5,6 +5,8 @@ This tutorial will cover the setup of three different software enviroments we us
 
 ## Prerequisite Software
 ### Windows
+Note when install select options that add commands to the path to make it easyer to uses the depeancies.
+
 Download and install [Git](https://git-scm.com/download/win).
 
 Download and install [Annaconda3](https://www.anaconda.com/distribution/).
@@ -38,7 +40,7 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 ```bash
 git clone https://github.com/lhy110/sail_tutorials.git
 cd sail_tutorials
-cd 1.\ Installation\ and\ Environment\ Setup/
+cd "1. Installation and Environment Setup"
 
 
 conda create --name SAIL python=3.6
@@ -133,14 +135,14 @@ coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwid
 tf.Tensor(-614.579, shape=(), dtype=float32)
 ```
 
-Installing the object detection dependencies.
+Installing the object detection dependencies. Places this in a direcroty so that it can be easily acces in the future.
 ```bash
+# Clone Tensorflow model garden
 git clone https://github.com/tensorflow/models.git
 
 cd models/research
 
 # Compile protos.
-
 protoc object_detection/protos/*.proto --python_out=.
 
 # COCO dependency
@@ -151,7 +153,13 @@ pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonA
 pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI
 
 # Install TensorFlow Object Detection API.
+# Winodws
+copy object_detection\\packages\\tf2\\setup.py .
+
+# Liniux
 cp object_detection/packages/tf2/setup.py .
+
+
 python -m pip install .
 ```
 
