@@ -37,6 +37,12 @@ The most common annotation types are;
   * **Object Detection:** Object detection goes a little more deeper than classification. In addition to the detection of the object, it identifies the location (bounding boxes) of the objects.
 * **Image Segmentation:** Image segmentation goes still deeper by recognising and understanding each pixel in the image. Since this provides both what and what is notan object of interest, it is highly accurate but time consuming. Whereas, the othertwo types are faster with less accuracy.
 
+<p align="center">
+  <img src="resources/Image Processing Types.PNG" width=800>
+  <p align="center">Fig.1 - Types of Data Lables.</p>
+</p>
+
+
 ### How does data labeling work?
 In machine learning, a properly labeled dataset that is used as the objective
 standard to train a model is often called “ground truth.” The accuracy of your trained
@@ -75,4 +81,17 @@ interval.
 Detailed VIA user guide can be found by following the URL. (http://www.robots.
 ox.ac.uk/~vgg/software/via/docs/user_guide.html)
 
-Complete the entire list of topics mentioned under Basic Usage to get a good understanding of this tool usage
+<p align="center">
+  <img src="resources/Data Labelling - To Detailed.PNG" width=300>
+  <img src="resources/Data Labelling - Few Details.PNG" width=300>
+  <img src="resources/Data Labelling - Correct.PNG" width=300>
+  <p align="center">Fig.2 - Road Surface Labled Example. Note from left to right is too many points, too few point, correct number of points.</p>
+</p>
+
+<p align="center">
+  <img src="resources/Data Labelling - To Detailed_2.PNG" width=300>
+  <img src="resources/Data Labelling - Few Details_2.PNG" width=300>
+  <img src="resources/Data Labelling - Correct_2.PNG" width=300>
+  <p align="center">Fig.2 - Potholee Labled Example. Note from left to right is too many points, too few point, correct number of points.</p>
+</p>
+
