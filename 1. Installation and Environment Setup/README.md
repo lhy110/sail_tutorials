@@ -154,7 +154,7 @@ pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirec
 # Winodws
 copy object_detection\\packages\\tf2\\setup.py .
 
-# Liniux
+# Linux
 cp object_detection/packages/tf2/setup.py .
 
 
@@ -206,17 +206,6 @@ I0805 14:16:54.657182 140250536642368 test_util.py:1972] time(__main__.ModelBuil
 Ran 20 tests in 19.541s
 
 OK (skipped=1)
-```
-
-```bash
-# Then restart the enviorment
-conda deactivate
-conda activate python_tf2
-```
-
-Return to the tutorial directory
-```
-pip install -r python_tf2_requirements.txt
 ```
 
 ## Matlab
