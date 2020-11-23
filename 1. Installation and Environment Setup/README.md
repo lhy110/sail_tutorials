@@ -68,9 +68,7 @@ Creating environment and installing tensorflow.
 ```bash
 conda create --name python_tf2 python=3.8
 conda activate python_tf2
-pip install tensorflow cython
-
-conda install protobuf
+pip install -r python_tf2_requirements.txt
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
