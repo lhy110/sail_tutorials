@@ -5,6 +5,8 @@ This tutorial will cover the setup of three different software enviroments we us
 
 ## Prerequisite Software
 ### Windows
+Note when install select options that add commands to the path to make it easyer to uses the depeancies.
+
 Download and install [Git](https://git-scm.com/download/win).
 
 Download and install [Annaconda3](https://www.anaconda.com/distribution/).
@@ -38,7 +40,7 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 ```bash
 git clone https://github.com/lhy110/sail_tutorials.git
 cd sail_tutorials
-cd 1.\ Installation\ and\ Environment\ Setup/
+cd "1. Installation and Environment Setup"
 
 
 conda create --name SAIL python=3.6
@@ -66,9 +68,7 @@ Creating environment and installing tensorflow.
 ```bash
 conda create --name python_tf2 python=3.8
 conda activate python_tf2
-pip install tensorflow cython
-
-conda install protobuf
+pip install -r python_tf2_requirements.txt
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
@@ -133,14 +133,14 @@ coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwid
 tf.Tensor(-614.579, shape=(), dtype=float32)
 ```
 
-Installing the object detection dependencies.
+Installing the object detection dependencies. Places this in a direcroty so that it can be easily acces in the future.
 ```bash
+# Clone Tensorflow model garden
 git clone https://github.com/tensorflow/models.git
 
 cd models/research
 
 # Compile protos.
-
 protoc object_detection/protos/*.proto --python_out=.
 
 # COCO dependency
@@ -151,7 +151,13 @@ pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonA
 pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI
 
 # Install TensorFlow Object Detection API.
+# Winodws
+copy object_detection\\packages\\tf2\\setup.py .
+
+# Linux
 cp object_detection/packages/tf2/setup.py .
+
+
 python -m pip install .
 ```
 
@@ -200,17 +206,6 @@ I0805 14:16:54.657182 140250536642368 test_util.py:1972] time(__main__.ModelBuil
 Ran 20 tests in 19.541s
 
 OK (skipped=1)
-```
-
-```bash
-# Then restart the enviorment
-conda deactivate
-conda activate python_tf2
-```
-
-Return to the tutorial directory
-```
-pip install -r python_tf2_requirements.txt
 ```
 
 ## Matlab
