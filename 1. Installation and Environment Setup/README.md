@@ -68,9 +68,7 @@ Creating environment and installing tensorflow.
 ```bash
 conda create --name python_tf2 python=3.8
 conda activate python_tf2
-pip install tensorflow cython
-
-conda install protobuf
+pip install -r python_tf2_requirements.txt
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
@@ -156,7 +154,7 @@ pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirec
 # Winodws
 copy object_detection\\packages\\tf2\\setup.py .
 
-# Liniux
+# Linux
 cp object_detection/packages/tf2/setup.py .
 
 
@@ -208,17 +206,6 @@ I0805 14:16:54.657182 140250536642368 test_util.py:1972] time(__main__.ModelBuil
 Ran 20 tests in 19.541s
 
 OK (skipped=1)
-```
-
-```bash
-# Then restart the enviorment
-conda deactivate
-conda activate python_tf2
-```
-
-Return to the tutorial directory
-```
-pip install -r python_tf2_requirements.txt
 ```
 
 ## Matlab
