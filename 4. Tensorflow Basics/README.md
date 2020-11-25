@@ -10,8 +10,8 @@ Please run these tutorial in the python_tf2 anaconda envirment.
 ## 4.3 CSV
 
 
-## 4.4 Keras
+## 4.4 Sequential Models
 
 
-## 4.5 Sequential Models
+## 4.5 Keras
 
