@@ -5,7 +5,7 @@ This tutorial will cover the setup of three different software enviroments we us
 
 ## Prerequisite Software
 ### Windows
-Note when install select options that add commands to the path to make it easyer to uses the depeancies.
+Note when install select options that add commands to the path to make it easyer to uses the dependencies.
 
 Download and install [Git](https://git-scm.com/download/win).
 
@@ -43,8 +43,8 @@ cd sail_tutorials
 cd "1. Installation and Environment Setup"
 
 
-conda create --name SAIL python=3.6
-conda activate SAIL
+conda create --name python_tf1 python=3.6
+conda activate python_tf1
 
 # Conda install if using a GPU, for CUDA and cuDNN.
 conda install -c anaconda tensorflow-gpu
@@ -83,7 +83,7 @@ Verify tensorflow using:
 python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 ```
 
-A result similar to the following will be printed out.
+A result similar to the following will be printed out. Note if you don't have a GPU the results willhave CPU and will show warning about notloding CUDA libraries. 
 ```
 2020-08-05 14:15:28.713790: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
 2020-08-05 14:15:29.388029: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
