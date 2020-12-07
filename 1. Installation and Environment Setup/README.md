@@ -1,7 +1,7 @@
 # Installation and Environment Setup
 By Nandakumar Thachapilly, Pac Hung, and Zac Todd
 
-This tutorial will cover the setup of three different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
+This tutorial will cover the setup of four different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
 
 ## Prerequisite Software
 ### Windows
