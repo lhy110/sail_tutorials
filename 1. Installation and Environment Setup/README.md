@@ -218,7 +218,7 @@ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 # If using GPU
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 
-# Check if your device is connected
+# Check if your device is connected, it should print either cuda enable device or the CPU.
 python -c "import torch; print(torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu'))"
 ```
 
