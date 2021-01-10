@@ -47,7 +47,7 @@ conda create --name python_tf1 python=3.6
 conda activate python_tf1
 
 # Conda install if using a GPU, for CUDA and cuDNN.
-conda install -c anaconda tensorflow-gpu
+conda install cudatoolkit=10.1 cudnn
 
 
 # Python Dependencies
