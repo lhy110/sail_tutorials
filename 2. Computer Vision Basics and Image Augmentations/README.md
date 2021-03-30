@@ -9,7 +9,3 @@ Please run these tutorial in either the python_tf1 or python_tf2 anaconda envirm
 ## 2.2 Convolution
 
 ## 2.3 Image Augmentation
-
-## 2.4 Histograms
-
-

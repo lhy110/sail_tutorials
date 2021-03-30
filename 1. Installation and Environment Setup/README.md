@@ -1,7 +1,7 @@
 # Installation and Environment Setup
-By Pac Hung and Zac Todd
+By Nandakumar Thachapilly, Pac Hung, and Zac Todd
 
-This tutorial will cover the setup of three different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
+This tutorial will cover the setup of four different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
 
 ## Prerequisite Software
 ### Windows
@@ -47,7 +47,7 @@ conda create --name python_tf1 python=3.6
 conda activate python_tf1
 
 # Conda install if using a GPU, for CUDA and cuDNN.
-conda install -c anaconda tensorflow-gpu
+conda install cudatoolkit=10.1 cudnn
 
 
 # Python Dependencies
@@ -207,6 +207,21 @@ Ran 20 tests in 19.541s
 
 OK (skipped=1)
 ```
+## PyTorch
+```bash
+conda create --name pytorch python=3.7
+conda activate pytorch
+
+# If using CPU
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+# If using GPU
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+
+# Check if your device is connected, it should print either cuda enable device or the CPU.
+python -c "import torch; print(torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu'))"
+```
+
 
 ## Matlab
 Matlab contains a lot of prebuild and tested computer vision, deep learning and sensor fusion tools, which maybe be uses as an inital tutorial in understaning how different methods work. They also provide many notebook (mlx) and video tutiorals found [here](https://au.mathworks.com/) and [here](https://www.youtube.com/user/MATLAB) respectivly.
