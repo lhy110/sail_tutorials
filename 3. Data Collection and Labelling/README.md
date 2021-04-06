@@ -150,9 +150,9 @@ Example of COCO JSON:
                     "iscrowd": 0,
                     "image_id": 1,
                     "category_id": 1,
-                    "segmentation":[[87.281, 708.408, 1416.71826, 1307.59]],
-                    "bbox": [87.281, 708.408, 1416.71826, 1307.59],
-                    "area":796574.87632
+                    "segmentation":[[87, 708, 90, 700]],
+                    "bbox": [87, 708, 3, 8],
+                    "area":24
                 }
             ],
             "categories": [
