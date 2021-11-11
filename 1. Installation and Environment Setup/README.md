@@ -1,5 +1,5 @@
 # Installation and Environment Setup
-By Nandakumar Thachapilly, Pac Hung, and Zac Todd
+By Zac Todd
 
 This tutorial will cover the setup of four different software enviroments we use at SAIL. They are python and tensorflow 1.X, python and tensorflow 2.X with tensorflow model garden, and Matlab.
 
@@ -36,46 +36,28 @@ sha256sum Anaconda3–<version>–Linux–x86_64.sh
 bash Anaconda3–<version>–Linux–x86_64.sh
 ```
 
-## Python with Tensorflow 1.X
+## PyTorch with OpenMMLab's models
+[OpenMMLab](https://github.com/open-mmlab) has models for classification, detection and segemantion, in their [mmclassification](https://github.com/open-mmlab/mmclassification),[https://github.com/open-mmlab/mmdetection](mmdetection), and [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) repos, please create a Anaconda enviorment by following the repos repective readmes.
+
+In addition to the repo instrutions it will also be useful to install jupyter notebooks.
 ```bash
-git clone https://github.com/lhy110/sail_tutorials.git
-cd sail_tutorials
-cd "1. Installation and Environment Setup"
+conda activate ENV_NAME
+pip install IPython jupyter jupyterlab
+```
 
-
-conda create --name python_tf1 python=3.6
-conda activate python_tf1
-
-# Conda install if using a GPU, for CUDA and cuDNN.
-conda install cudatoolkit=10.1 cudnn
-
-
-# Python Dependencies
-pip install -r python_tf1_requirements.txt
-
-# COCO dependency
-# Windows
-pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
-
-# Linux
-pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI
-
-pip install git+https://github.com/matterport/Mask_RCNN.git
-````
-
-## Python and Tensorflow 2.x with Tensorflow Model Garden
+## Tensorflow with Tensorflow Model Garden
 Creating environment and installing tensorflow.
 ```bash
-conda create --name python_tf2 python=3.8
-conda activate python_tf2
-pip install -r python_tf2_requirements.txt
+conda create --name tf2_model_garden python=3.8
+conda activate tf2_model_garden
+pip install tensorflow scipy Pillow cython matplotlib opencv-python h5py imgaug IPython jupyter jupyterlab scikit-learn shapely pandas contextlib2 pycocotools
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
 
 # Then restart the enviorment
 conda deactivate
-conda activate python_tf2
+conda activate tf2_model_garden
 ```
 
 Verify tensorflow using:
@@ -206,20 +188,6 @@ I0805 14:16:54.657182 140250536642368 test_util.py:1972] time(__main__.ModelBuil
 Ran 20 tests in 19.541s
 
 OK (skipped=1)
-```
-## PyTorch
-```bash
-conda create --name pytorch python=3.7
-conda activate pytorch
-
-# If using CPU
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-
-# If using GPU
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-
-# Check if your device is connected, it should print either cuda enable device or the CPU.
-python -c "import torch; print(torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu'))"
 ```
 
 
