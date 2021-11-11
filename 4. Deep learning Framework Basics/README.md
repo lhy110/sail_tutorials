@@ -1,4 +1,4 @@
-# 4. Tensorflow Basics
+# 4. Deep learning Frameworks
 Please run these tutorial in the python_tf2 anaconda envirment.
 
 ## Tensorflow 
