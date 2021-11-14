@@ -1,4 +1,4 @@
-# Slam-kitti_dataset
+# SLAM - kitti dataset
 This tutorial uses hdl slam to map kitti dataset.
 
 #### Prerequisites
