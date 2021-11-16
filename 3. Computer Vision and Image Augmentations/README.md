@@ -9,5 +9,5 @@ Please run these tutorial in either the python_tf1 or python_tf2 anaconda envirm
 ## 3.2 Convolution
 
 ## 3.3 Image Augmentation
-### 3.3.1 AutoAugment
-### 3.3.2 Mix Up
+### 3.3.1 AutoAugment and RandAugment
+### 3.3.2 MixUp
