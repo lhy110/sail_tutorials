@@ -1,4 +1,4 @@
-# 3. Data Collection and Labelling
+# 4. Data Collection and Labelling
 By Nandakumar Thachapilly and Zac Todd
 
 ## Data Collection
