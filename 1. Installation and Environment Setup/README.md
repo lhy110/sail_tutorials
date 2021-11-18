@@ -39,7 +39,7 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 ## PyTorch with OpenMMLab's models
 [OpenMMLab](https://github.com/open-mmlab) has models for classification, detection and segemantion, in their [mmclassification](https://github.com/open-mmlab/mmclassification),[https://github.com/open-mmlab/mmdetection](mmdetection), and [mmsegmentation](https://github.com/open-mmlab/mmsegmentation).
 
-Please follow the instrution for installing [https://github.com/open-mmlab/mmdetection](mmdetection).
+Please follow the instrution for installing [mmdetection](https://github.com/open-mmlab/mmdetection]).
 
 In addition to the repo instrutions it will also be useful to install jupyter notebooks.
 ```bash
