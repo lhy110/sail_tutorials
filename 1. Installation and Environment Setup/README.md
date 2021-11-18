@@ -37,12 +37,19 @@ bash Anaconda3–<version>–Linux–x86_64.sh
 ```
 
 ## PyTorch with OpenMMLab's models
-[OpenMMLab](https://github.com/open-mmlab) has models for classification, detection and segemantion, in their [mmclassification](https://github.com/open-mmlab/mmclassification),[https://github.com/open-mmlab/mmdetection](mmdetection), and [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) repos, please create a Anaconda enviorment by following the repos repective readmes.
+[OpenMMLab](https://github.com/open-mmlab) has models for classification, detection and segemantion, in their [mmclassification](https://github.com/open-mmlab/mmclassification),[https://github.com/open-mmlab/mmdetection](mmdetection), and [mmsegmentation](https://github.com/open-mmlab/mmsegmentation).
+
+Please follow the instrution for installing [https://github.com/open-mmlab/mmdetection](mmdetection).
 
 In addition to the repo instrutions it will also be useful to install jupyter notebooks.
 ```bash
-conda activate ENV_NAME
-pip install IPython jupyter jupyterlab
+conda activate openmmlab
+pip install jupyterlab
+```
+
+And then install the classification and segmenation libraies.
+```bash
+mim install mmcls mmseg
 ```
 
 ## Tensorflow with Tensorflow Model Garden
