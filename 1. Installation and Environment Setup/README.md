@@ -11,9 +11,8 @@ Download and install [Git](https://git-scm.com/download/win).
 
 Download and install [Annaconda3](https://www.anaconda.com/distribution/).
 
-Download and install [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
-Install [Visual Studio Build Tools 2019 and Visual C++ build tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) (link downloads the .exe).
+Install [Visual Studio Build Tools 2019 and Visual C++ build tools](https://aka.ms/vs/17/release/vc_redist.x64.exe) (link downloads the .exe).
 
 ### Ubuntu
 Install Git and build essentials.
@@ -36,7 +35,7 @@ sha256sum Anaconda3–<version>–Linux–x86_64.sh
 bash Anaconda3–<version>–Linux–x86_64.sh
 ```
 
-## PyTorch with OpenMMLab's models
+## PyTorch with OpenMMLab's models (GPU)
 [OpenMMLab](https://github.com/open-mmlab) has models for classification, detection and segemantion, in their [mmclassification](https://github.com/open-mmlab/mmclassification),[https://github.com/open-mmlab/mmdetection](mmdetection), and [mmsegmentation](https://github.com/open-mmlab/mmsegmentation).
 
 Please follow the instrution for installing [mmdetection](https://github.com/open-mmlab/mmdetection]).
@@ -57,7 +56,7 @@ Creating environment and installing tensorflow.
 ```bash
 conda create --name tf2_model_garden python=3.8
 conda activate tf2_model_garden
-pip install tensorflow scipy Pillow cython matplotlib opencv-python h5py imgaug IPython jupyter jupyterlab scikit-learn shapely pandas contextlib2 pycocotools
+pip install tensorflow scipy Pillow cython matplotlib opencv-python h5py imgaug IPython jupyter jupyterlab scikit-learn shapely pandas contextlib2
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
@@ -130,14 +129,8 @@ git clone https://github.com/tensorflow/models.git
 cd models/research
 
 # Compile protos.
+conda install protobuf
 protoc object_detection/protos/*.proto --python_out=.
-
-# COCO dependency
-# Windows
-pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
-
-# Linux
-pip install git+https://github.com/waleedka/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI
 
 # Install TensorFlow Object Detection API.
 # Winodws
