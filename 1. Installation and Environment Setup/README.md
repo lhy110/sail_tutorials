@@ -54,9 +54,8 @@ mim install mmcls mmseg
 ## Tensorflow with Tensorflow Model Garden
 Creating environment and installing tensorflow.
 ```bash
-conda create --name tf2_model_garden python=3.8
+conda create --name tf2_model_garden python=3.8 protobuf
 conda activate tf2_model_garden
-pip install tensorflow scipy Pillow cython matplotlib opencv-python h5py imgaug IPython jupyter jupyterlab scikit-learn shapely pandas contextlib2
 
 # Dependencies to be installed if using a GPU. This installs CUDA and cuDNN.
 conda install cudatoolkit=10.1 cudnn
@@ -64,6 +63,27 @@ conda install cudatoolkit=10.1 cudnn
 # Then restart the enviorment
 conda deactivate
 conda activate tf2_model_garden
+```
+
+
+Installing the object detection dependencies. Places this in a direcroty so that it can be easily acces in the future.
+```bash
+# Clone Tensorflow model garden
+git clone https://github.com/tensorflow/models.git
+cd models/research
+
+# Compile protos.
+protoc object_detection/protos/*.proto --python_out=.
+
+# Install TensorFlow Object Detection API.
+# Winodws
+copy object_detection\\packages\\tf2\\setup.py .
+
+# Linux
+cp object_detection/packages/tf2/setup.py .
+
+
+python -m pip install .
 ```
 
 Verify tensorflow using:
@@ -121,27 +141,6 @@ coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwid
 tf.Tensor(-614.579, shape=(), dtype=float32)
 ```
 
-Installing the object detection dependencies. Places this in a direcroty so that it can be easily acces in the future.
-```bash
-# Clone Tensorflow model garden
-git clone https://github.com/tensorflow/models.git
-
-cd models/research
-
-# Compile protos.
-conda install protobuf
-protoc object_detection/protos/*.proto --python_out=.
-
-# Install TensorFlow Object Detection API.
-# Winodws
-copy object_detection\\packages\\tf2\\setup.py .
-
-# Linux
-cp object_detection/packages/tf2/setup.py .
-
-
-python -m pip install .
-```
 
 Test Object Detection dependencies have been installed using:
 ```bash
