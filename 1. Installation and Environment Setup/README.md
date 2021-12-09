@@ -11,7 +11,6 @@ Download and install [Git](https://git-scm.com/download/win).
 
 Download and install [Annaconda3](https://www.anaconda.com/distribution/).
 
-
 Install [Visual Studio Build Tools 2019 and Visual C++ build tools](https://aka.ms/vs/17/release/vc_redist.x64.exe) (link downloads the .exe).
 
 ### Ubuntu
@@ -90,57 +89,6 @@ Verify tensorflow using:
 ```bash
 python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 ```
-
-A result similar to the following will be printed out. Note if you don't have a GPU the results willhave CPU and will show warning about notloding CUDA libraries. 
-```
-2020-08-05 14:15:28.713790: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
-2020-08-05 14:15:29.388029: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
-2020-08-05 14:15:29.402977: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.403254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
-pciBusID: 0000:01:00.0 name: GeForce RTX 2080 Ti computeCapability: 7.5
-coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwidth: 573.69GiB/s
-2020-08-05 14:15:29.403269: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
-2020-08-05 14:15:29.404100: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
-2020-08-05 14:15:29.404999: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
-2020-08-05 14:15:29.405124: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
-2020-08-05 14:15:29.405970: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
-2020-08-05 14:15:29.406445: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
-2020-08-05 14:15:29.408268: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
-2020-08-05 14:15:29.408328: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.408655: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.408898: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
-2020-08-05 14:15:29.409083: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
-To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2020-08-05 14:15:29.432774: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3600000000 Hz
-2020-08-05 14:15:29.433142: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a887caa30 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2020-08-05 14:15:29.433155: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2020-08-05 14:15:29.569641: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.569970: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a8acc2db0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
-2020-08-05 14:15:29.569984: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
-2020-08-05 14:15:29.570089: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.570327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
-pciBusID: 0000:01:00.0 name: GeForce RTX 2080 Ti computeCapability: 7.5
-coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwidth: 573.69GiB/s
-2020-08-05 14:15:29.570344: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
-2020-08-05 14:15:29.570357: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
-2020-08-05 14:15:29.570365: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
-2020-08-05 14:15:29.570373: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
-2020-08-05 14:15:29.570381: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
-2020-08-05 14:15:29.570389: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
-2020-08-05 14:15:29.570397: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
-2020-08-05 14:15:29.570424: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.570665: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.570886: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
-2020-08-05 14:15:29.570902: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
-2020-08-05 14:15:29.845639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-08-05 14:15:29.845665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0
-2020-08-05 14:15:29.845670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N
-2020-08-05 14:15:29.845788: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.846060: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-08-05 14:15:29.846299: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9952 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5)
-tf.Tensor(-614.579, shape=(), dtype=float32)
-```
-
 
 Test Object Detection dependencies have been installed using:
 ```bash
