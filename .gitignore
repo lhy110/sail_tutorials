@@ -3,3 +3,10 @@
 *.h5
 *.pb
 *.index 
+*.jpg
+*.jpeg
+*.csv
+
+ruff.log
+.python-version
+.DS_Store
