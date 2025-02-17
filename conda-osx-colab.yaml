@@ -1,0 +1,20 @@
+name: py311-osx-colab
+channels:
+  - apple
+  - conda-forge
+dependencies:
+  - python=3.11.11
+  - pip>=23.1.0
+  - pip:
+    - tensorflow-macos>=2.12.0
+    - tensorflow-metal>=1.0.0
+    - tensorflow-datasets>=4.9.2
+    - opencv-python>=4.7.0.72
+    - matplotlib>=3.5.0
+    - ruff>=0.0.271
+    - yapf>=0.33.0
+    - isort>=5.12.0
+    - pytest>=7.3.1
+    - pytest-cov>=4.1.0
+    - ipython
+    - pyright
